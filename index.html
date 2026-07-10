@@ -1,1928 +1,1101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Instituto Essencial Neurokids | Fonoaudiologia e Neurodesenvolvimento
-    </title>
 
-    <meta
-      name="description"
-      content="Especialistas em Neurodesenvolvimento e Autismo. Atendimento transdisciplinar acolhedor para crianças e suporte completo para as famílias."
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Essencial Neurokids | Fonoaudiologia e Neurodesenvolvimento</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="description"
+        content="Especialistas em Neurodesenvolvimento e Autismo. Atendimento transdisciplinar acolhedor para crianças e suporte completo para as famílias.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                azul: "#2A5Cbf",
-                azulSoft: "#E0F2FE",
-                amarelo: "#FBBF24",
-                amareloSoft: "#FEF9C3",
-                verde: "#10B981",
-                verdeSoft: "#DCFCE7",
-                rosa: "#EC4899",
-                rosaSoft: "#FCE7F3",
-                bege: "#F8FAFC",
-              },
-              text: {
-                main: "#1E293B",
-                light: "#64748B",
-              },
-            },
-            borderRadius: {
-              "4xl": "2rem",
-              "5xl": "3rem",
-            },
-            animation: {
-              float: "float 6s ease-in-out infinite",
-              "spin-slow": "spin 12s linear infinite",
-            },
-            keyframes: {
-              float: {
-                "0%, 100%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-20px)" },
-              },
-            },
-          },
-        },
-      };
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            azul: '#2A5Cbf',
+                            azulSoft: '#E0F2FE',
+                            amarelo: '#FBBF24',
+                            amareloSoft: '#FEF9C3',
+                            verde: '#10B981',
+                            verdeSoft: '#DCFCE7',
+                            rosa: '#EC4899',
+                            rosaSoft: '#FCE7F3',
+                            bege: '#F8FAFC'
+                        },
+                        text: {
+                            main: '#1E293B',
+                            light: '#64748B'
+                        }
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '3rem',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
     </script>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background-color: #f8fafc;
-        color: #1e293b;
-        overflow-x: hidden;
-      }
-
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #2a5cbf;
-      }
-
-      .glass-header {
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(15px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .nav-link {
-        position: relative;
-      }
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 3px;
-        bottom: -6px;
-        left: 0;
-        background: #2a5cbf;
-        transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-        border-radius: 2px;
-      }
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
-      .swiper-pagination-bullet-active {
-        background: #2a5cbf !important;
-      }
-
-      .shimmer-btn {
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s ease;
-      }
-      .shimmer-btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.2),
-          transparent
-        );
-        transition: 0.6s;
-      }
-      .shimmer-btn:hover::before {
-        left: 100%;
-      }
-      .shimmer-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 30px -10px rgba(42, 92, 191, 0.4);
-      }
-
-      .card-shadow {
-        box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.05);
-        transition: all 0.4s ease;
-      }
-      .card-shadow:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 50px -15px rgba(42, 92, 191, 0.15);
-      }
-
-      /* ── RESPONSIVIDADE CORRIGIDA ── */
-
-      /* Hero: títulos grandes demais em mobile */
-      @media (max-width: 480px) {
-        #home h1 {
-          font-size: 2.4rem !important;
-          line-height: 1.15 !important;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+            overflow-x: hidden;
         }
-        #home p.text-xl {
-          font-size: 1rem !important;
-        }
-      }
 
-      /* Seção Sobre: imagens sobrepostas quebram em telas pequenas */
-      @media (max-width: 1023px) {
-        #sobre .grid.lg\:grid-cols-2 > div:first-child {
-          display: none; /* oculta o bloco de imagens sobrepostas em mobile */
-        }
-      }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #F1F5F9; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2A5Cbf; }
 
-      /* Sobre: títulos ultra grandes */
-      @media (max-width: 640px) {
-        #sobre h2 {
-          font-size: 2.5rem !important;
-          line-height: 1.1 !important;
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
-      }
-      @media (min-width: 641px) and (max-width: 1023px) {
-        #sobre h2 {
-          font-size: 3.5rem !important;
+
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -6px;
+            left: 0;
+            background: #2A5Cbf;
+            transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+            border-radius: 2px;
         }
-      }
+        .nav-link:hover::after { width: 100%; }
 
-      /* Equipe: título */
-      @media (max-width: 640px) {
-        #equipe h2 {
-          font-size: 2rem !important;
-          line-height: 1.2 !important;
-        }
-      }
+        .swiper-pagination-bullet-active { background: #2A5Cbf !important; }
 
-      /* Serviços: grid de cards - garante 1 coluna em mobile, 2 em tablet */
-      #servicos .grid.md\:grid-cols-2.xl\:grid-cols-4 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-      @media (max-width: 640px) {
-        #servicos h2 {
-          font-size: 2.2rem !important;
-          line-height: 1.1 !important;
-        }
-      }
-
-      /* Contato: título */
-      @media (max-width: 640px) {
-        #contato h2 {
-          font-size: 2.5rem !important;
-          line-height: 1.1 !important;
-        }
-      }
-
-      /* Mapa: altura menor em mobile */
-      @media (max-width: 767px) {
-        #contato .h-\[650px\] {
-          height: 420px !important;
-        }
-      }
-
-      /* Header pill: não ultrapassa a tela em mobile */
-      #header-inner {
-        max-width: 100%;
-      }
-
-      /* Contato info cards: evita overflow horizontal */
-      @media (max-width: 480px) {
-        #contato .grid.gap-6 > div {
-          flex-wrap: wrap;
-        }
-        #contato .grid.gap-6 > div .flex-grow {
-          min-width: 0;
-        }
-      }
-
-      /* Swiper cards: altura mínima para não cortar conteúdo */
-      .teamSwiper .swiper-slide {
-        height: auto !important;
-      }
-
-      /* Footer: colunas em mobile */
-      @media (max-width: 767px) {
-        footer .grid.md\:grid-cols-2 {
-          grid-template-columns: 1fr !important;
-          gap: 2.5rem !important;
-        }
-      }
-
-      /* Botão AGENDAR: padding menor em telas muito pequenas */
-      @media (max-width: 360px) {
         .shimmer-btn {
-          padding-left: 1rem !important;
-          padding-right: 1rem !important;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
         }
-      }
+        .shimmer-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.6s;
+        }
+        .shimmer-btn:hover::before { left: 100%; }
+        .shimmer-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -10px rgba(42, 92, 191, 0.4);
+        }
 
-      /* Seção serviços: padding correto no container pai */
-      @media (max-width: 767px) {
-        #servicos > .container {
-          padding-left: 1rem;
-          padding-right: 1rem;
+        .card-shadow {
+            box-shadow: 0 10px 40px -15px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
         }
-      }
+        .card-shadow:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px -15px rgba(42,92,191,0.15);
+        }
 
-      /* Sobre: lista de especialidades em 1 coluna em telas pequenas */
-      @media (max-width: 480px) {
-        #sobre ul.grid {
-          grid-template-columns: 1fr !important;
-        }
-      }
+        /* ── RESPONSIVIDADE CORRIGIDA ── */
 
-      /* Floating badge do "sobre": não sobrepõe fora da tela */
-      @media (max-width: 1023px) {
-        .animate-float {
-          display: none;
+        /* Hero: títulos grandes demais em mobile */
+        @media (max-width: 480px) {
+            #home h1 {
+                font-size: 2.4rem !important;
+                line-height: 1.15 !important;
+            }
+            #home p.text-xl {
+                font-size: 1rem !important;
+            }
         }
-      }
 
-      /* Contato: badge WHATSAPP em mobile não vaza */
-      @media (max-width: 400px) {
-        #contato a[href="#"].px-6 {
-          padding-left: 0.75rem;
-          padding-right: 0.75rem;
-          font-size: 0.6rem;
+        /* Seção Sobre: imagens sobrepostas quebram em telas pequenas */
+        @media (max-width: 1023px) {
+            #sobre .grid.lg\:grid-cols-2 > div:first-child {
+                display: none; /* oculta o bloco de imagens sobrepostas em mobile */
+            }
         }
-      }
+
+        /* Sobre: títulos ultra grandes */
+        @media (max-width: 640px) {
+            #sobre h2 {
+                font-size: 2.5rem !important;
+                line-height: 1.1 !important;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 1023px) {
+            #sobre h2 {
+                font-size: 3.5rem !important;
+            }
+        }
+
+        /* Equipe: título */
+        @media (max-width: 640px) {
+            #equipe h2 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+        }
+
+        /* Serviços: grid de cards - garante 1 coluna em mobile, 2 em tablet */
+        #servicos .grid.md\:grid-cols-2.xl\:grid-cols-4 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        @media (max-width: 640px) {
+            #servicos h2 {
+                font-size: 2.2rem !important;
+                line-height: 1.1 !important;
+            }
+        }
+
+        /* Contato: título */
+        @media (max-width: 640px) {
+            #contato h2 {
+                font-size: 2.5rem !important;
+                line-height: 1.1 !important;
+            }
+        }
+
+        /* Mapa: altura menor em mobile */
+        @media (max-width: 767px) {
+            #contato .h-\[650px\] {
+                height: 420px !important;
+            }
+        }
+
+        /* Header pill: não ultrapassa a tela em mobile */
+        #header-inner {
+            max-width: 100%;
+        }
+
+        /* Contato info cards: evita overflow horizontal */
+        @media (max-width: 480px) {
+            #contato .grid.gap-6 > div {
+                flex-wrap: wrap;
+            }
+            #contato .grid.gap-6 > div .flex-grow {
+                min-width: 0;
+            }
+        }
+
+        /* Swiper cards: altura mínima para não cortar conteúdo */
+        .teamSwiper .swiper-slide {
+            height: auto !important;
+        }
+
+        /* Footer: colunas em mobile */
+        @media (max-width: 767px) {
+            footer .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+            }
+        }
+
+        /* Botão AGENDAR: padding menor em telas muito pequenas */
+        @media (max-width: 360px) {
+            .shimmer-btn {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+
+        /* Seção serviços: padding correto no container pai */
+        @media (max-width: 767px) {
+            #servicos > .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        /* Sobre: lista de especialidades em 1 coluna em telas pequenas */
+        @media (max-width: 480px) {
+            #sobre ul.grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Floating badge do "sobre": não sobrepõe fora da tela */
+        @media (max-width: 1023px) {
+            .animate-float {
+                display: none;
+            }
+        }
+
+        /* Contato: badge WHATSAPP em mobile não vaza */
+        @media (max-width: 400px) {
+            #contato .whatsapp-badge {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                font-size: 0.6rem;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <div
-      id="drawer"
-      class="fixed inset-0 bg-brand-azul z-[999] translate-x-full transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center items-center gap-8 lg:hidden"
-    >
-      <button
-        id="close-drawer"
-        class="absolute top-10 right-10 text-white text-5xl"
-      >
-        &times;
-      </button>
-      <nav class="flex flex-col items-center gap-8">
-        <a
-          href="#home"
-          class="text-white text-3xl font-bold uppercase tracking-widest menu-item"
-          >Home</a
-        >
-        <a
-          href="#sobre"
-          class="text-white text-3xl font-bold uppercase tracking-widest menu-item"
-          >Sobre Nós</a
-        >
-        <a
-          href="#equipe"
-          class="text-white text-3xl font-bold uppercase tracking-widest menu-item"
-          >Equipe</a
-        >
-        <a
-          href="#servicos"
-          class="text-white text-3xl font-bold uppercase tracking-widest menu-item"
-          >Serviços</a
-        >
-        <a
-          href="#contato"
-          class="text-white text-3xl font-bold uppercase tracking-widest menu-item"
-          >Contato</a
-        >
-      </nav>
-      <div class="flex gap-6 text-white text-2xl mt-12">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a
-          href="https://wa.me/556130243799?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Instituto%20Essencial%20Neurokids%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
-          target="_blank"
-          ><i class="fab fa-whatsapp"></i
-        ></a>
-      </div>
+<body>
+
+    <div id="drawer"
+        class="fixed inset-0 bg-brand-azul z-[999] translate-x-full transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center items-center gap-8 lg:hidden">
+        <button id="close-drawer" class="absolute top-10 right-10 text-white text-5xl">&times;</button>
+        <nav class="flex flex-col items-center gap-8">
+            <a href="#home" class="text-white text-3xl font-bold uppercase tracking-widest menu-item">Home</a>
+            <a href="#sobre" class="text-white text-3xl font-bold uppercase tracking-widest menu-item">Sobre Nós</a>
+            <a href="#equipe" class="text-white text-3xl font-bold uppercase tracking-widest menu-item">Equipe</a>
+            <a href="#servicos" class="text-white text-3xl font-bold uppercase tracking-widest menu-item">Serviços</a>
+            <a href="#contato" class="text-white text-3xl font-bold uppercase tracking-widest menu-item">Contato</a>
+        </nav>
+        <div class="flex gap-6 text-white text-2xl mt-12">
+            <a href="https://www.instagram.com/essencialneurokids" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5561999935852?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Instituto%20Essencial%20Neurokids%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
     </div>
 
-    <header
-      class="fixed top-0 left-0 right-0 z-[500] transition-all duration-300"
-      id="header"
-    >
-      <div class="container mx-auto px-4 sm:px-6 py-4">
-        <div
-          class="glass-header rounded-full shadow-lg px-4 sm:px-8 py-3 flex items-center justify-between transition-all"
-          id="header-inner"
-        >
-          <div
-            class="flex-shrink-0 transition-transform hover:scale-105 duration-300"
-          >
-            <img
-              src="logo.png"
-              alt="Neurokids"
-              class="h-10 sm:h-12 md:h-16 w-auto"
-              id="logo-img"
-            />
-          </div>
+    <header class="fixed top-0 left-0 right-0 z-[500] transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="glass-header rounded-full shadow-lg px-4 sm:px-8 py-3 flex items-center justify-between transition-all"
+                id="header-inner">
 
-          <ul
-            class="hidden lg:flex items-center space-x-10 text-text-main font-bold text-sm uppercase tracking-tight"
-          >
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-            <li><a href="#equipe" class="nav-link">Equipe</a></li>
-            <li><a href="#servicos" class="nav-link">Serviços</a></li>
-            <li><a href="#contato" class="nav-link">Contato</a></li>
-          </ul>
+                <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
+                    <img src="logo.png" alt="Neurokids" class="h-10 sm:h-12 md:h-16 w-auto" id="logo-img">
+                </div>
 
-          <div class="flex items-center gap-3">
-            <a
-              href="https://wa.me/556130243799?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20meu%20filho%28a%29%20no%20Instituto%20Essencial%20Neurokids."
-              class="shimmer-btn bg-brand-azul text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm flex items-center gap-2 sm:gap-3"
-            >
-              <i class="fab fa-whatsapp text-base sm:text-lg"></i>
-              <span class="hidden sm:inline">AGENDAR AVALIAÇÃO</span>
-              <span class="sm:hidden"
-                ><i class="fas fa-calendar-check"></i
-              ></span>
-            </a>
+                <ul
+                    class="hidden lg:flex items-center space-x-10 text-text-main font-bold text-sm uppercase tracking-tight">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#equipe" class="nav-link">Equipe</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
 
-            <button
-              id="open-drawer"
-              class="lg:hidden text-brand-azul text-2xl p-2"
-            >
-              <i class="fas fa-bars-staggered"></i>
-            </button>
-          </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/5561999935852?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20meu%20filho%28a%29%20no%20Instituto%20Essencial%20Neurokids." target="_blank"
+                        class="shimmer-btn bg-brand-azul text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm flex items-center gap-2 sm:gap-3">
+                        <i class="fab fa-whatsapp text-base sm:text-lg"></i>
+                        <span class="hidden sm:inline">AGENDAR AVALIAÇÃO</span>
+                        <span class="sm:hidden"><i class="fas fa-calendar-check"></i></span>
+                    </a>
+
+                    <button id="open-drawer" class="lg:hidden text-brand-azul text-2xl p-2">
+                        <i class="fas fa-bars-staggered"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </header>
 
     <main>
-      <!-- HERO -->
-      <section
-        id="home"
-        class="relative min-h-screen flex items-center pt-32 pb-16 lg:pt-40 lg:pb-16 overflow-hidden bg-brand-bege"
-      >
-        <div
-          class="absolute -top-24 -right-24 w-96 h-96 bg-brand-azulSoft rounded-full blur-[120px] opacity-60"
-        ></div>
-        <div
-          class="absolute bottom-0 -left-24 w-80 h-80 bg-brand-rosaSoft rounded-full blur-[100px] opacity-40"
-        ></div>
+        <!-- HERO -->
+        <section id="home" class="relative min-h-screen flex items-center pt-32 pb-16 lg:pt-40 lg:pb-16 overflow-hidden bg-brand-bege">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-azulSoft rounded-full blur-[120px] opacity-60"></div>
+            <div class="absolute bottom-0 -left-24 w-80 h-80 bg-brand-rosaSoft rounded-full blur-[100px] opacity-40"></div>
 
-        <div class="container mx-auto px-6 lg:px-20 relative z-10 w-full">
-          <div class="grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="text-center lg:text-left"
-            >
-              <p
-                class="text-text-main font-bold text-xs uppercase tracking-[0.2em] mb-4 sm:mb-6"
-              >
-                Instituto Essencial Neurokids
-              </p>
+            <div class="container mx-auto px-6 lg:px-20 relative z-10 w-full">
+                <div class="grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
 
-              <h1
-                class="text-4xl sm:text-5xl lg:text-7xl font-bold text-brand-azul leading-tight mb-6 sm:mb-8"
-              >
-                Esperança para o desenvolvimento do seu filho,
-                <br class="hidden sm:block" />
-                <span class="text-brand-azul font-medium italic"
-                  >baseada em ciência.</span
-                >
-              </h1>
+                    <div data-aos="fade-up" data-aos-duration="800" class="text-center lg:text-left">
+                        <p class="text-text-main font-bold text-xs uppercase tracking-[0.2em] mb-4 sm:mb-6">
+                            Instituto Essencial Neurokids
+                        </p>
 
-              <p
-                class="text-text-light text-base sm:text-xl lg:text-2xl max-w-lg mx-auto lg:mx-0 mb-8 sm:mb-10 leading-relaxed opacity-90"
-              >
-                Intervenções especializadas para desenvolver o potencial único
-                de cada criança através de um olhar humano e transdisciplinar.
-              </p>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-azul leading-tight mb-6 sm:mb-8">
+                            Acompanhamento especializado para o crescimento do seu filho
+                        </h1>
 
-              <div
-                class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              >
-                <a
-                  href="#contato"
-                  class="bg-brand-azul text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-blue-700 text-center shadow-lg shadow-brand-azul/20"
-                >
-                  Agendar Avaliação
+                        <p class="text-text-light text-base sm:text-xl lg:text-2xl max-w-lg mx-auto lg:mx-0 mb-8 sm:mb-10 leading-relaxed opacity-90">
+                            Intervenções especializadas para desenvolver o potencial único de cada criança através de um
+                            olhar humano e transdisciplinar.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#contato"
+                                class="bg-brand-azul text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-blue-700 text-center shadow-lg shadow-brand-azul/20">
+                                Agendar Avaliação
+                            </a>
+                            <a href="#servicos"
+                                class="text-brand-azul font-bold px-8 py-4 border border-brand-azul/20 rounded-full hover:bg-brand-azul/5 transition-all text-center">
+                                Nossos Serviços
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200/60">
+                            <div class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-widest">
+                                <i class="fas fa-certificate"></i>
+                                <span>Clínica Certificada</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-widest">
+                                <i class="fas fa-users"></i>
+                                <span>Equipe Transdisciplinar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex justify-center lg:justify-end mt-6 lg:mt-0" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="absolute inset-0 bg-brand-azul/5 blur-[120px] rounded-full -z-10"></div>
+                        <div class="relative bg-white p-3 sm:p-4 md:p-6 rounded-[2rem] sm:rounded-[3rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.05)] border border-slate-50 w-full max-w-sm sm:max-w-md lg:max-w-none">
+                            <div class="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden bg-brand-bege flex items-center justify-center p-8 sm:p-12 lg:p-20">
+                                <img src="logo2.png" alt="Instituto Essencial Neurokids"
+                                    class="w-full h-auto max-w-[220px] sm:max-w-[300px] lg:max-w-[450px] object-contain transition-transform duration-1000 hover:scale-105">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="py-16 sm:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-6 lg:px-20">
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                    <!-- Bloco de imagens: oculto em mobile via CSS acima -->
+                    <div class="relative hidden lg:block" data-aos="fade-right">
+                        <div class="relative z-20 w-4/5 ml-auto">
+                            <div class="rounded-tl-[80px] rounded-br-[80px] overflow-hidden border-r-8 border-t-8 border-brand-rosa shadow-2xl">
+                                <img src="fachada.webp" alt="Fachada do Instituto Essencial Neurokids, Edifício Spazio Duo"
+                                    class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+
+                        <div class="absolute top-1/2 left-0 z-30 bg-white p-6 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex items-center gap-4 border-l-8 border-brand-azul -translate-y-1/2 animate-float">
+                            <span class="text-3xl font-black text-brand-azul tracking-tighter"><i class="fas fa-heart"></i></span>
+                            <p class="text-[10px] font-black text-text-light uppercase tracking-widest leading-tight">Ciência<br>&amp; Afeto</p>
+                        </div>
+
+                        <div class="relative z-10 w-4/5 mt-[-80px]">
+                            <div class="rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border-l-8 border-b-8 border-brand-amarelo shadow-2xl">
+                                <img src="sala-atendimento.webp" alt="Sala de atendimento acolhedora do Instituto Essencial Neurokids"
+                                    class="w-full h-96 object-cover hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-10 -right-10 text-brand-azulSoft opacity-20 text-9xl -z-0">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                    </div>
+
+                    <!-- Imagem única para mobile/tablet -->
+                    <div class="relative lg:hidden" data-aos="fade-right">
+                        <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-brand-rosa/30">
+                            <img src="sala-atendimento.jpg" alt="Sala de atendimento acolhedora do Instituto Essencial Neurokids"
+                                class="w-full h-64 sm:h-80 object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white px-5 py-3 rounded-2xl shadow-lg border-l-4 border-brand-azul flex items-center gap-3">
+                            <span class="text-2xl font-black text-brand-azul"><i class="fas fa-heart"></i></span>
+                            <p class="text-[10px] font-black text-text-light uppercase tracking-widest leading-tight">Ciência<br>&amp; Afeto</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 sm:space-y-8" data-aos="fade-left">
+                        <div class="space-y-3">
+                            <span class="text-brand-azul font-black uppercase tracking-[0.2em] text-text-main text-xs">Instituto Essencial Neurokids</span>
+                            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-brand-azul leading-none tracking-tighter uppercase italic">
+                                Atendimentos <br><span class="text-brand-azul">Terapêuticos</span> <br>Intensivos
+                            </h2>
+                            <div class="w-24 h-2 bg-gradient-to-r from-brand-azul via-brand-amarelo to-brand-rosa rounded-full"></div>
+                        </div>
+
+                        <div class="text-text-light space-y-5 text-base sm:text-lg leading-relaxed font-medium">
+                            <p>
+                                Somos um instituto de terapias específicas para crianças com <span class="text-text-main font-bold">Transtorno do Espectro Autista (TEA)</span> e outras condições neurodivergentes ou transtornos do neurodesenvolvimento. Nossa
+                                metodologia é baseada no afeto e na ciência, preparando cada pequeno para as conquistas do dia a dia.
+                            </p>
+                            <p>
+                                Acreditamos que a família é a peça fundamental. Por isso, oferecemos um ambiente
+                                transdisciplinar onde pais e profissionais caminham juntos pela autonomia da criança.
+                            </p>
+                            <p class="inline-block px-4 py-2 bg-brand-verdeSoft text-brand-verde font-black rounded-lg text-sm border border-brand-verde/10">
+                                Todas as terapias são baseadas na Ciência ABA.
+                            </p>
+                        </div>
+
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pt-4 font-bold text-text-main">
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-azulSoft flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Fonoaudiologia
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-amareloSoft flex items-center justify-center text-brand-amarelo group-hover:bg-brand-amarelo group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Fisioterapia
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-rosaSoft flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Psicologia
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-verdeSoft flex items-center justify-center text-brand-verde group-hover:bg-brand-verde group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Intervenção ABA
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-azulSoft flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Terapia Ocupacional e Integração Sensorial de Ayres
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-amareloSoft flex items-center justify-center text-brand-amarelo group-hover:bg-brand-amarelo group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Musicoterapia
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-rosaSoft flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Terapia Alimentar (Nutricionista)
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-verdeSoft flex items-center justify-center text-brand-verde group-hover:bg-brand-verde group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Orientação Parental
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-azulSoft flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Avaliação Neuropsicológica
+                            </li>
+                            <li class="flex items-center gap-3 group cursor-pointer">
+                                <span class="w-8 h-8 rounded-lg bg-brand-amareloSoft flex items-center justify-center text-brand-amarelo group-hover:bg-brand-amarelo group-hover:text-white transition-all"><i class="fas fa-check text-xs"></i></span>
+                                Neuropsicopedagogia
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPE -->
+        <section id="equipe" class="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-brand-bege to-transparent opacity-60"></div>
+            <div class="absolute -right-20 top-40 w-80 h-80 bg-brand-azulSoft/20 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-6">
+
+                <div class="max-w-4xl mx-auto text-center mb-12 sm:mb-20" data-aos="fade-up">
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <span class="w-8 h-[2px] bg-brand-azul/20"></span>
+                        <span class="text-text-main font-bold uppercase tracking-[0.2em] text-[10px]">Corpo Clínico</span>
+                        <span class="w-8 h-[2px] bg-brand-azul/20"></span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-azul leading-tight tracking-tight">
+                        Especialistas dedicados ao <br>
+                        <span class="text-brand-azul font-medium italic">neurodesenvolvimento.</span>
+                    </h2>
+
+                    <div class="mt-8 flex justify-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-azul/20"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-amarelo/20"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-rosa/20"></span>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <button class="team-prev absolute left-1 sm:left-2 lg:-left-2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.15)] border border-slate-100 flex items-center justify-center text-brand-azul hover:bg-brand-azul hover:text-white transition-all">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </button>
+                    <button class="team-next absolute right-1 sm:right-2 lg:-right-2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.15)] border border-slate-100 flex items-center justify-center text-brand-azul hover:bg-brand-azul hover:text-white transition-all">
+                        <i class="fas fa-chevron-right text-sm"></i>
+                    </button>
+
+                    <div class="swiper teamSwiper py-10 px-4 overflow-hidden">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(236,72,153,0.15)] border border-slate-100 h-full flex flex-col">
+                                <div class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner">
+                                    <div class="absolute inset-0 bg-brand-rosa mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
+                                    <img src="loiane.jpeg" alt="Loiane Sodré Matos"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <span class="bg-white/90 backdrop-blur-md text-brand-rosa px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Destaque</span>
+                                    </div>
+                                </div>
+                                <div class="px-2 pb-4 flex flex-col flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-rosa transition-colors tracking-tight">Loiane Sodré Matos</h3>
+                                            <p class="text-brand-rosa font-bold text-xs uppercase tracking-widest mt-1">Psicóloga | Psicopedagoga | Neuropsicóloga</p>
+                                            <p class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1">CRP 01/29689 I.S</p>
+                                        </div>
+                                        <div class="w-10 h-10 bg-brand-rosaSoft rounded-full flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all flex-shrink-0">
+                                            <i class="fas fa-plus text-xs"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-text-light text-sm leading-relaxed mb-6 flex-grow">
+                                        Professora do Atendimento Educacional Especializado, com ampla experiência na inclusão e no neurodesenvolvimento, atuando com crianças e adolescentes com TEA e outros transtornos do desenvolvimento.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(42,92,191,0.15)] border border-slate-100 h-full flex flex-col">
+                                <div class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner">
+                                    <div class="absolute inset-0 bg-brand-azul mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10"></div>
+                                    <img src="manu2.jpeg" alt="Manoel Silva"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <span class="bg-white/90 backdrop-blur-md text-brand-azul px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Destaque</span>
+                                    </div>
+                                </div>
+
+                                <div class="px-2 pb-4 flex flex-col flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-azul transition-colors tracking-tight">Manoel Silva</h3>
+                                            <p class="text-brand-azul font-bold text-xs uppercase tracking-widest mt-1">Fonoaudiólogo | CEO Instituto Essencial</p>
+                                            <p class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1">CRFa 5 133554</p>
+                                        </div>
+                                        <div class="w-10 h-10 bg-brand-bege rounded-full flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all flex-shrink-0">
+                                            <i class="fas fa-plus text-xs"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-text-light text-sm leading-relaxed mb-6 flex-grow">
+                                        Fonoaudiólogo pela UFS, atuante em Linguagem e Fala, Motricidade Orofacial, Estimulação Precoce e Apraxia de Fala Infantil. Pós-graduado em ABA e em Disfagia, habilitado em PROMPT I e II e Certificado VB-MAPP. Coordenador e supervisor clínico, fundador e CEO do Instituto Essencial Neurokids.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(251,191,36,0.15)] border border-slate-100 h-full flex flex-col">
+                                <div class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner">
+                                    <div class="absolute inset-0 bg-brand-amarelo mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
+                                    <img src="edvania2.jpeg" alt="Edvânia de Almeida Oliveira Silva"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                </div>
+                                <div class="px-2 pb-4 flex flex-col flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl sm:text-2xl font-black text-text-main group-hover:text-yellow-600 transition-colors tracking-tight">Edvânia de Almeida Oliveira Silva</h3>
+                                            <p class="text-yellow-600 font-bold text-xs uppercase tracking-widest mt-1">Psicóloga | TCC e ABA</p>
+                                        </div>
+                                        <div class="w-10 h-10 bg-brand-amareloSoft rounded-full flex items-center justify-center text-yellow-600 group-hover:bg-brand-amarelo group-hover:text-white transition-all flex-shrink-0">
+                                            <i class="fas fa-plus text-xs"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-text-light text-sm leading-relaxed mb-6 flex-grow">
+                                        Atua com Terapia Cognitivo-Comportamental (TCC) e Análise do Comportamento Aplicada (ABA) no atendimento de crianças, adolescentes, adultos e orientação familiar, com prática baseada em evidências científicas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(236,72,153,0.15)] border border-slate-100 h-full flex flex-col">
+                                <div class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner">
+                                    <div class="absolute inset-0 bg-brand-rosa mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
+                                    <img src="elaine2.jpeg" alt="Elaine Maria de Camargo"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                </div>
+                                <div class="px-2 pb-4 flex flex-col flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-rosa transition-colors tracking-tight">Elaine Maria de Camargo</h3>
+                                            <p class="text-brand-rosa font-bold text-xs uppercase tracking-widest mt-1">Neuropsicopedagoga</p>
+                                            <p class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1">SBNP 14101</p>
+                                        </div>
+                                        <div class="w-10 h-10 bg-brand-rosaSoft rounded-full flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all flex-shrink-0">
+                                            <i class="fas fa-plus text-xs"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-text-light text-sm leading-relaxed mb-6 flex-grow">
+                                        Formação em Psicopedagogia e Neuropsicologia, com especialização em ABA e pós-graduação em TEA, apoiando o processo de aprendizagem e desenvolvimento infantil.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.15)] border border-slate-100 h-full flex flex-col">
+                                <div class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner">
+                                    <div class="absolute inset-0 bg-brand-verde mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
+                                    <img src="jacqueline.jpeg" alt="Jacqueline S. de Sousa"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                </div>
+                                <div class="px-2 pb-4 flex flex-col flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-verde transition-colors tracking-tight">Jacqueline S. de Sousa</h3>
+                                            <p class="text-brand-verde font-bold text-xs uppercase tracking-widest mt-1">Neuropsicóloga</p>
+                                            <p class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1">CRP 01/19944</p>
+                                        </div>
+                                        <div class="w-10 h-10 bg-brand-verdeSoft rounded-full flex items-center justify-center text-brand-verde group-hover:bg-brand-verde group-hover:text-white transition-all flex-shrink-0">
+                                            <i class="fas fa-plus text-xs"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-text-light text-sm leading-relaxed mb-6 flex-grow">
+                                        Pós-graduada em Neuropsicologia e em Análise do Comportamento Aplicada (ABA), com formação em Análise do Desenvolvimento Infantil e curso do Inventário Portage e VB-MAPP.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                    <div class="flex justify-center items-center gap-8 mt-12 sm:mt-20">
+                        <div class="swiper-pagination !static !w-auto"></div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-azulSoft/30 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 right-0 w-64 h-64 bg-brand-amareloSoft/20 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center mb-12 sm:mb-24" data-aos="fade-up">
+
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <span class="w-8 h-[2px] bg-brand-azul/20"></span>
+                        <span class="text-text-main font-bold uppercase tracking-[0.3em] text-[10px]">Especialidades</span>
+                        <span class="w-8 h-[2px] bg-brand-azul/20"></span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-brand-azul leading-tight tracking-tighter mb-6 sm:mb-8">
+                        Abordagem <span class="text-brand-azul font-medium italic">transdisciplinar</span> <br class="hidden sm:block">
+                        e integrada.
+                    </h2>
+
+                    <p class="text-base sm:text-lg lg:text-xl text-text-light max-w-2xl mx-auto leading-relaxed opacity-90">
+                        Nossas intervenções são pautadas na ciência e no afeto, garantindo que cada criança receba o
+                        suporte exato para sua evolução cognitiva, motora e social.
+                    </p>
+
+                    <div class="mt-8 sm:mt-10 flex justify-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-azul/20"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-amarelo/20"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-rosa/20"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6 sm:gap-8 px-6 sm:px-10 lg:px-12 xl:px-8">
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-azul/10 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand-azul/10"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-brand-azul translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-azul text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Fonoaudiologia</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Desenvolvimento da linguagem, fala e motricidade orofacial com foco em comunicação funcional.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-azul group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-amarelo/10 shadow-sm hover:shadow-2xl hover:shadow-brand-amarelo/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute inset-0 bg-brand-amarelo translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-amarelo text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Fisioterapia</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Estimulação motora especializada para fortalecer o desenvolvimento físico e funcional da criança.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-amarelo group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-rosa/10 shadow-sm hover:shadow-2xl hover:shadow-brand-rosa/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-brand-rosa translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-rosa text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Psicologia</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Acompanhamento emocional e comportamental com escuta acolhedora para a criança e a família.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-rosa group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-verde/10 shadow-sm hover:shadow-2xl hover:shadow-brand-verde/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="250">
+                    <div class="absolute inset-0 bg-brand-verde translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-verde text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-diagram-project"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Intervenção ABA</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Análise do Comportamento Aplicada para redução de barreiras e aquisição de novas habilidades.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-verde group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-azul/10 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand-azul/10"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute inset-0 bg-brand-azul translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-azul text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Terapia Ocupacional e Integração Sensorial de Ayres</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Integração sensorial e autonomia nas atividades diárias para uma vida mais independente.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-azul group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-amarelo/10 shadow-sm hover:shadow-2xl hover:shadow-brand-amarelo/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="350">
+                    <div class="absolute inset-0 bg-brand-amarelo translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-amarelo text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Musicoterapia</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Uso terapêutico da música para estimular comunicação, expressão e regulação emocional.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-amarelo group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-rosa/10 shadow-sm hover:shadow-2xl hover:shadow-brand-rosa/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-brand-rosa translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-rosa text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-apple-whole"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Terapia Alimentar</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Acompanhamento com nutricionista especializado para uma relação saudável com a alimentação.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-rosa group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-verde/10 shadow-sm hover:shadow-2xl hover:shadow-brand-verde/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="450">
+                    <div class="absolute inset-0 bg-brand-verde translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-verde text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-people-roof"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Orientação Parental</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Suporte e capacitação para os pais atuarem como parceiros ativos no desenvolvimento do filho.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-verde group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-azul/10 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand-azul/10"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute inset-0 bg-brand-azul translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-azul text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Avaliação Neuropsicológica</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Mapeamento cognitivo detalhado para direcionar o plano terapêutico mais adequado à criança.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-azul group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-amarelo/10 shadow-sm hover:shadow-2xl hover:shadow-brand-amarelo/10 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="550">
+                    <div class="absolute inset-0 bg-brand-amarelo translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-amarelo text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h4 class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500">Neuropsicopedagogia</h4>
+                        <p class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm">
+                            Suporte especializado nos processos de aprendizagem e superação de desafios acadêmicos.
+                        </p>
+                        <div class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-amarelo group-hover:text-white font-bold text-sm">
+                            Saiba mais <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-14 sm:mt-20 text-center px-6" data-aos="zoom-in">
+                <p class="text-text-light font-medium mb-6 italic">Precisa de um atendimento transdisciplinar para seu filho?</p>
+                <a href="#contato"
+                    class="inline-flex items-center gap-4 text-brand-azul font-black border-b-2 border-brand-azul/20 hover:border-brand-azul transition-all pb-2 uppercase tracking-widest text-sm">
+                    Agendar uma triagem inicial <i class="fas fa-chevron-right"></i>
                 </a>
-                <a
-                  href="#servicos"
-                  class="text-brand-azul font-bold px-8 py-4 border border-brand-azul/20 rounded-full hover:bg-brand-azul/5 transition-all text-center"
-                >
-                  Nossos Serviços
-                </a>
-              </div>
-
-              <div
-                class="flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200/60"
-              >
-                <div
-                  class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-widest"
-                >
-                  <i class="fas fa-certificate"></i>
-                  <span>Clínica Certificada</span>
-                </div>
-                <div
-                  class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-widest"
-                >
-                  <i class="fas fa-users"></i>
-                  <span>Equipe Transdisciplinar</span>
-                </div>
-              </div>
             </div>
+        </section>
 
-            <div
-              class="relative flex justify-center lg:justify-end mt-6 lg:mt-0"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-            >
-              <div
-                class="absolute inset-0 bg-brand-azul/5 blur-[120px] rounded-full -z-10"
-              ></div>
-              <div
-                class="relative bg-white p-3 sm:p-4 md:p-6 rounded-[2rem] sm:rounded-[3rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.05)] border border-slate-50 w-full max-w-sm sm:max-w-md lg:max-w-none"
-              >
-                <div
-                  class="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden bg-brand-bege flex items-center justify-center p-8 sm:p-12 lg:p-20"
-                >
-                  <img
-                    src="logo2.png"
-                    alt="Instituto Essencial Neurokids"
-                    class="w-full h-auto max-w-[220px] sm:max-w-[300px] lg:max-w-[450px] object-contain transition-transform duration-1000 hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <!-- CONTATO -->
+        <section id="contato" class="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/4 h-1/4 bg-brand-azulSoft/20 blur-[120px] rounded-full -z-10"></div>
 
-      <!-- SOBRE -->
-      <section id="sobre" class="py-16 sm:py-24 bg-white overflow-hidden">
-        <div class="container mx-auto px-6 lg:px-20">
-          <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <!-- Bloco de imagens: oculto em mobile via CSS acima -->
-            <div class="relative hidden lg:block" data-aos="fade-right">
-              <div class="relative z-20 w-4/5 ml-auto">
-                <div
-                  class="rounded-tl-[80px] rounded-br-[80px] overflow-hidden border-r-8 border-t-8 border-brand-rosa shadow-2xl"
-                >
-                  <img
-                    src="im1.jpg"
-                    alt="Criança brincando com blocos lúdicos"
-                    class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
+            <div class="container mx-auto px-6 lg:px-20">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-              <div
-                class="absolute top-1/2 left-0 z-30 bg-white p-6 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex items-center gap-4 border-l-8 border-brand-azul -translate-y-1/2 animate-float"
-              >
-                <span
-                  class="text-3xl font-black text-brand-azul tracking-tighter"
-                  ><i class="fas fa-heart"></i
-                ></span>
-                <p
-                  class="text-[10px] font-black text-text-light uppercase tracking-widest leading-tight"
-                >
-                  Ciência<br />&amp; Afeto
-                </p>
-              </div>
-
-              <div class="relative z-10 w-4/5 mt-[-80px]">
-                <div
-                  class="rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border-l-8 border-b-8 border-brand-amarelo shadow-2xl"
-                >
-                  <img
-                    src="im2.jpg"
-                    alt="Terapeuta acolhendo criança"
-                    class="w-full h-96 object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-
-              <div
-                class="absolute -bottom-10 -right-10 text-brand-azulSoft opacity-20 text-9xl -z-0"
-              >
-                <i class="fas fa-puzzle-piece"></i>
-              </div>
-            </div>
-
-            <!-- Imagem única para mobile/tablet -->
-            <div class="relative lg:hidden" data-aos="fade-right">
-              <div
-                class="rounded-3xl overflow-hidden shadow-xl border-4 border-brand-rosa/30"
-              >
-                <img
-                  src="im1.jpg"
-                  alt="Criança brincando com blocos lúdicos"
-                  class="w-full h-64 sm:h-80 object-cover"
-                />
-              </div>
-              <div
-                class="absolute -bottom-4 -right-4 bg-white px-5 py-3 rounded-2xl shadow-lg border-l-4 border-brand-azul flex items-center gap-3"
-              >
-                <span class="text-2xl font-black text-brand-azul"
-                  ><i class="fas fa-heart"></i
-                ></span>
-                <p
-                  class="text-[10px] font-black text-text-light uppercase tracking-widest leading-tight"
-                >
-                  Ciência<br />&amp; Afeto
-                </p>
-              </div>
-            </div>
-
-            <div class="space-y-6 sm:space-y-8" data-aos="fade-left">
-              <div class="space-y-3">
-                <span
-                  class="text-brand-azul font-black uppercase tracking-[0.2em] text-text-main text-xs"
-                  >Instituto Essencial Neurokids</span
-                >
-                <h2
-                  class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-brand-azul leading-none tracking-tighter uppercase italic"
-                >
-                  Atendimentos <br /><span class="text-brand-azul"
-                    >Terapêuticos</span
-                  >
-                  <br />Intensivos
-                </h2>
-                <div
-                  class="w-24 h-2 bg-gradient-to-r from-brand-azul via-brand-amarelo to-brand-rosa rounded-full"
-                ></div>
-              </div>
-
-              <div
-                class="text-text-light space-y-5 text-base sm:text-lg leading-relaxed font-medium"
-              >
-                <p>
-                  Somos um instituto de terapias específicas para crianças com
-                  <span class="text-text-main font-bold"
-                    >Transtorno do Espectro Autista (TEA)</span
-                  >
-                  e outras condições neurodivergentes ou transtornos do
-                  neurodesenvolvimento. Nossa metodologia é baseada no afeto e
-                  na ciência, preparando cada pequeno para as conquistas do dia
-                  a dia.
-                </p>
-                <p>
-                  Acreditamos que a família é a peça fundamental. Por isso,
-                  oferecemos um ambiente transdisciplinar onde pais e
-                  profissionais caminham juntos pela autonomia da criança.
-                </p>
-                <p
-                  class="inline-block px-4 py-2 bg-brand-verdeSoft text-brand-verde font-black rounded-lg text-sm border border-brand-verde/10"
-                >
-                  Todas as terapias são baseadas na Ciência ABA.
-                </p>
-              </div>
-
-              <ul
-                class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pt-4 font-bold text-text-main"
-              >
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-azulSoft flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Fonoaudiologia
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-amareloSoft flex items-center justify-center text-brand-amarelo group-hover:bg-brand-amarelo group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Fisioterapia
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-rosaSoft flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Psicologia
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-verdeSoft flex items-center justify-center text-brand-verde group-hover:bg-brand-verde group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Intervenção ABA
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-azulSoft flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Terapia Ocupacional e Integração Sensorial de Ayres
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-amareloSoft flex items-center justify-center text-brand-amarelo group-hover:bg-brand-amarelo group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Musicoterapia
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-rosaSoft flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Terapia Alimentar (Nutricionista)
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-verdeSoft flex items-center justify-center text-brand-verde group-hover:bg-brand-verde group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Orientação Parental
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-azulSoft flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Avaliação Neuropsicológica
-                </li>
-                <li class="flex items-center gap-3 group cursor-pointer">
-                  <span
-                    class="w-8 h-8 rounded-lg bg-brand-amareloSoft flex items-center justify-center text-brand-amarelo group-hover:bg-brand-amarelo group-hover:text-white transition-all"
-                    ><i class="fas fa-check text-xs"></i
-                  ></span>
-                  Neuropsicopedagogia
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EQUIPE -->
-      <section
-        id="equipe"
-        class="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden"
-      >
-        <div
-          class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-brand-bege to-transparent opacity-60"
-        ></div>
-        <div
-          class="absolute -right-20 top-40 w-80 h-80 bg-brand-azulSoft/20 rounded-full blur-3xl"
-        ></div>
-
-        <div class="container mx-auto px-6">
-          <div
-            class="max-w-4xl mx-auto text-center mb-12 sm:mb-20"
-            data-aos="fade-up"
-          >
-            <div class="flex items-center justify-center gap-3 mb-6">
-              <span class="w-8 h-[2px] bg-brand-azul/20"></span>
-              <span
-                class="text-text-main font-bold uppercase tracking-[0.2em] text-[10px]"
-                >Corpo Clínico</span
-              >
-              <span class="w-8 h-[2px] bg-brand-azul/20"></span>
-            </div>
-
-            <h2
-              class="text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-azul leading-tight tracking-tight"
-            >
-              Especialistas dedicados ao <br />
-              <span class="text-brand-azul font-medium italic"
-                >neurodesenvolvimento.</span
-              >
-            </h2>
-
-            <div class="mt-8 flex justify-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-azul/20"></span>
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-amarelo/20"></span>
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-rosa/20"></span>
-            </div>
-          </div>
-
-          <div class="relative">
-            <button
-              class="team-prev absolute left-1 sm:left-2 lg:-left-2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.15)] border border-slate-100 flex items-center justify-center text-brand-azul hover:bg-brand-azul hover:text-white transition-all"
-            >
-              <i class="fas fa-chevron-left text-sm"></i>
-            </button>
-            <button
-              class="team-next absolute right-1 sm:right-2 lg:-right-2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.15)] border border-slate-100 flex items-center justify-center text-brand-azul hover:bg-brand-azul hover:text-white transition-all"
-            >
-              <i class="fas fa-chevron-right text-sm"></i>
-            </button>
-
-            <div class="swiper teamSwiper py-10 px-4 overflow-hidden">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto">
-                  <div
-                    class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(236,72,153,0.15)] border border-slate-100 h-full flex flex-col"
-                  >
-                    <div
-                      class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner"
-                    >
-                      <div
-                        class="absolute inset-0 bg-brand-rosa mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"
-                      ></div>
-                      <img
-                        src="loiane.jpeg"
-                        alt="Loiane Sodré Matos"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div
-                        class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      >
-                        <span
-                          class="bg-white/90 backdrop-blur-md text-brand-rosa px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg"
-                          >Destaque</span
-                        >
-                      </div>
-                    </div>
-                    <div class="px-2 pb-4 flex flex-col flex-grow">
-                      <div class="flex justify-between items-start mb-4">
-                        <div>
-                          <h3
-                            class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-rosa transition-colors tracking-tight"
-                          >
-                            Loiane Sodré Matos
-                          </h3>
-                          <p
-                            class="text-brand-rosa font-bold text-xs uppercase tracking-widest mt-1"
-                          >
-                            Psicóloga | Psicopedagoga | Neuropsicóloga
-                          </p>
-                          <p
-                            class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1"
-                          >
-                            CRP 01/29689 I.S
-                          </p>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="space-y-10 sm:space-y-12">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-10 h-[2px] bg-brand-azul/30"></span>
+                                <span class="text-text-main font-bold uppercase tracking-[0.3em] text-[10px]">Onde Estamos</span>
+                            </div>
+                            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-brand-azul leading-none tracking-tighter">
+                                Venha nos <br>
+                                <span class="text-brand-azul font-medium italic">conhecer.</span>
+                            </h2>
+                            <p class="text-text-light text-base sm:text-lg max-w-md opacity-80 leading-relaxed">
+                                Um espaço planejado nos mínimos detalhes para o conforto e desenvolvimento do seu filho.
+                            </p>
                         </div>
-                        <div
-                          class="w-10 h-10 bg-brand-rosaSoft rounded-full flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all flex-shrink-0"
-                        >
-                          <i class="fas fa-plus text-xs"></i>
-                        </div>
-                      </div>
-                      <p
-                        class="text-text-light text-sm leading-relaxed mb-6 flex-grow"
-                      >
-                        Professora do Atendimento Educacional Especializado, com
-                        ampla experiência na inclusão e no neurodesenvolvimento,
-                        atuando com crianças e adolescentes com TEA e outros
-                        transtornos do desenvolvimento.
-                      </p>
-                      <div class="pt-6 border-t border-slate-50">
-                        <a
-                          href="https://instagram.com/loianesodre.psicologainfantil"
-                          target="_blank"
-                          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-rosaSoft text-brand-rosa font-bold text-xs uppercase tracking-widest hover:bg-brand-rosa hover:text-white transition-all"
-                        >
-                          <i class="fab fa-instagram"></i> Seguir no Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="swiper-slide h-auto">
-                  <div
-                    class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(42,92,191,0.15)] border border-slate-100 h-full flex flex-col"
-                  >
-                    <div
-                      class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner"
-                    >
-                      <div
-                        class="absolute inset-0 bg-brand-azul mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10"
-                      ></div>
-                      <img
-                        src="manu2.jpeg"
-                        alt="Manoel Silva"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div
-                        class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      >
-                        <span
-                          class="bg-white/90 backdrop-blur-md text-brand-azul px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg"
-                          >Destaque</span
-                        >
-                      </div>
+                        <div class="grid gap-4 sm:gap-6">
+                            <div class="group flex items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-brand-bege border border-transparent hover:border-brand-azul/10 hover:bg-white hover:shadow-xl hover:shadow-brand-azul/5 transition-all duration-500">
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center text-brand-azul text-lg sm:text-xl shadow-sm group-hover:bg-brand-azul group-hover:text-white transition-all duration-500 flex-shrink-0">
+                                    <i class="fas fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-xs sm:text-sm font-black text-text-main uppercase tracking-widest mb-1">Endereço</h5>
+                                    <p class="text-text-light text-sm sm:text-base leading-snug font-medium">Edifício Spazio Duo - Taguatinga Sul<br>Sala 301, 3º andar - Brasília, DF</p>
+                                </div>
+                            </div>
+
+                            <div class="group flex items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-brand-bege border border-transparent hover:border-brand-azul/10 hover:bg-white hover:shadow-xl hover:shadow-brand-azul/5 transition-all duration-500">
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center text-brand-azul text-lg sm:text-xl shadow-sm group-hover:bg-brand-azul group-hover:text-white transition-all duration-500 flex-shrink-0">
+                                    <i class="fas fa-phone-volume"></i>
+                                </div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-xs sm:text-sm font-black text-text-main uppercase tracking-widest mb-1">Agendamento</h5>
+                                    <p class="text-text-main text-base sm:text-lg font-bold leading-none">(61) 99993-5852</p>
+                                </div>
+                                <a href="https://wa.me/5561999935852?text=Ol%C3%A1%21%20Estou%20no%20site%20do%20Instituto%20Essencial%20Neurokids%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank"
+                                    class="whatsapp-badge px-4 sm:px-6 py-2 sm:py-3 bg-brand-azul/10 text-brand-azul rounded-xl font-bold text-[10px] sm:text-xs hover:bg-brand-azul hover:text-white transition-all flex-shrink-0">
+                                    WHATSAPP
+                                </a>
+                            </div>
+
+                            <div class="group flex items-start gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-brand-bege border border-transparent hover:border-brand-azul/10 hover:bg-white hover:shadow-xl hover:shadow-brand-azul/5 transition-all duration-500">
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center text-brand-azul text-lg sm:text-xl shadow-sm group-hover:bg-brand-azul group-hover:text-white transition-all duration-500 flex-shrink-0">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-xs sm:text-sm font-black text-text-main uppercase tracking-widest mb-1">Horários</h5>
+                                    <p class="text-text-light text-sm sm:text-base font-medium leading-relaxed">Segunda a Sexta: 08:00 às 19:00<br class="sm:hidden"> <span class="hidden sm:inline">| </span>Sábados: 08:00 às 12:00</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="px-2 pb-4 flex flex-col flex-grow">
-                      <div class="flex justify-between items-start mb-4">
-                        <div>
-                          <h3
-                            class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-azul transition-colors tracking-tight"
-                          >
-                            Manoel Silva
-                          </h3>
-                          <p
-                            class="text-brand-azul font-bold text-xs uppercase tracking-widest mt-1"
-                          >
-                            Fonoaudiólogo | CEO Instituto Essencial
-                          </p>
-                          <p
-                            class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1"
-                          >
-                            CRFa 5 133554
-                          </p>
+                    <div class="relative" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="absolute -inset-4 bg-brand-azul/5 blur-2xl rounded-[4rem]"></div>
+                        <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-amareloSoft rounded-full opacity-50 blur-2xl animate-pulse"></div>
+
+                        <div class="relative h-[420px] sm:h-[520px] lg:h-[650px] w-full bg-white rounded-[2.5rem] sm:rounded-[4rem] shadow-2xl overflow-hidden border-[8px] sm:border-[12px] border-white ring-1 ring-slate-100">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Edif%C3%ADcio%20Spazio%20Duo%2C%20Setor%20D%20Sul%2C%20Lote%2004%2C%20Taguatinga%2C%20Bras%C3%ADlia%20-%20DF&output=embed"
+                                width="100%" height="100%" style="border:0; filter: grayscale(0.2) contrast(1.1);"
+                                allowfullscreen="" loading="lazy"></iframe>
+
+                            <div class="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 bg-white/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl border border-white/50 flex items-center justify-between">
+                                <div>
+                                    <p class="text-[10px] font-black text-brand-azul uppercase tracking-[0.2em] mb-1">Clínica Neurokids</p>
+                                    <p class="text-sm font-bold text-text-main">Brasília, DF</p>
+                                </div>
+                                <a href="https://maps.app.goo.gl/GD5mJ5aVEWoTRiCY7?g_st=iw" target="_blank"
+                                    class="w-10 h-10 sm:w-12 sm:h-12 bg-brand-azul text-white rounded-xl sm:rounded-2xl flex items-center justify-center hover:scale-110 transition-transform">
+                                    <i class="fas fa-directions"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div
-                          class="w-10 h-10 bg-brand-bege rounded-full flex items-center justify-center text-brand-azul group-hover:bg-brand-azul group-hover:text-white transition-all flex-shrink-0"
-                        >
-                          <i class="fas fa-plus text-xs"></i>
-                        </div>
-                      </div>
-                      <p
-                        class="text-text-light text-sm leading-relaxed mb-6 flex-grow"
-                      >
-                        Fonoaudiólogo pela UFS, atuante em Linguagem e Fala,
-                        Motricidade Orofacial, Estimulação Precoce e Apraxia de
-                        Fala Infantil. Pós-graduado em ABA e em Disfagia,
-                        habilitado em PROMPT I e II e Certificado VB-MAPP.
-                        Coordenador e supervisor clínico, fundador e CEO do
-                        Instituto Essencial Neurokids.
-                      </p>
-                      <div class="pt-6 border-t border-slate-50">
-                        <a
-                          href="#"
-                          target="_blank"
-                          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-azulSoft text-brand-azul font-bold text-xs uppercase tracking-widest hover:bg-brand-azul hover:text-white transition-all"
-                        >
-                          <i class="fab fa-instagram"></i> Seguir no Instagram
-                        </a>
-                      </div>
                     </div>
-                  </div>
+
                 </div>
-
-                <div class="swiper-slide h-auto">
-                  <div
-                    class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(251,191,36,0.15)] border border-slate-100 h-full flex flex-col"
-                  >
-                    <div
-                      class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner"
-                    >
-                      <div
-                        class="absolute inset-0 bg-brand-amarelo mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"
-                      ></div>
-                      <img
-                        src="edvania2.jpeg"
-                        alt="Edvânia de Almeida Oliveira Silva"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    <div class="px-2 pb-4 flex flex-col flex-grow">
-                      <div class="flex justify-between items-start mb-4">
-                        <div>
-                          <h3
-                            class="text-xl sm:text-2xl font-black text-text-main group-hover:text-yellow-600 transition-colors tracking-tight"
-                          >
-                            Edvânia de Almeida Oliveira Silva
-                          </h3>
-                          <p
-                            class="text-yellow-600 font-bold text-xs uppercase tracking-widest mt-1"
-                          >
-                            Psicóloga | TCC e ABA
-                          </p>
-                        </div>
-                        <div
-                          class="w-10 h-10 bg-brand-amareloSoft rounded-full flex items-center justify-center text-yellow-600 group-hover:bg-brand-amarelo group-hover:text-white transition-all flex-shrink-0"
-                        >
-                          <i class="fas fa-plus text-xs"></i>
-                        </div>
-                      </div>
-                      <p
-                        class="text-text-light text-sm leading-relaxed mb-6 flex-grow"
-                      >
-                        Atua com Terapia Cognitivo-Comportamental (TCC) e
-                        Análise do Comportamento Aplicada (ABA) no atendimento
-                        de crianças, adolescentes, adultos e orientação
-                        familiar, com prática baseada em evidências científicas.
-                      </p>
-                      <div class="pt-6 border-t border-slate-50">
-                        <a
-                          href="https://instagram.com/psi.edvaniaalmeida"
-                          target="_blank"
-                          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-amareloSoft text-yellow-600 font-bold text-xs uppercase tracking-widest hover:bg-brand-amarelo hover:text-white transition-all"
-                        >
-                          <i class="fab fa-instagram"></i> Seguir no Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                  <div
-                    class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(236,72,153,0.15)] border border-slate-100 h-full flex flex-col"
-                  >
-                    <div
-                      class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner"
-                    >
-                      <div
-                        class="absolute inset-0 bg-brand-rosa mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"
-                      ></div>
-                      <img
-                        src="elaine2.jpeg"
-                        alt="Elaine Maria de Camargo"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    <div class="px-2 pb-4 flex flex-col flex-grow">
-                      <div class="flex justify-between items-start mb-4">
-                        <div>
-                          <h3
-                            class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-rosa transition-colors tracking-tight"
-                          >
-                            Elaine Maria de Camargo
-                          </h3>
-                          <p
-                            class="text-brand-rosa font-bold text-xs uppercase tracking-widest mt-1"
-                          >
-                            Neuropsicopedagoga
-                          </p>
-                          <p
-                            class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1"
-                          >
-                            SBNP 14101
-                          </p>
-                        </div>
-                        <div
-                          class="w-10 h-10 bg-brand-rosaSoft rounded-full flex items-center justify-center text-brand-rosa group-hover:bg-brand-rosa group-hover:text-white transition-all flex-shrink-0"
-                        >
-                          <i class="fas fa-plus text-xs"></i>
-                        </div>
-                      </div>
-                      <p
-                        class="text-text-light text-sm leading-relaxed mb-6 flex-grow"
-                      >
-                        Formação em Psicopedagogia e Neuropsicologia, com
-                        especialização em ABA e pós-graduação em TEA, apoiando o
-                        processo de aprendizagem e desenvolvimento infantil.
-                      </p>
-                      <div class="pt-6 border-t border-slate-50">
-                        <a
-                          href="https://instagram.com/elaine_camargo.psicopedagoga"
-                          target="_blank"
-                          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-rosaSoft text-brand-rosa font-bold text-xs uppercase tracking-widest hover:bg-brand-rosa hover:text-white transition-all"
-                        >
-                          <i class="fab fa-instagram"></i> Seguir no Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                  <div
-                    class="group relative bg-white p-5 sm:p-6 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.15)] border border-slate-100 h-full flex flex-col"
-                  >
-                    <div
-                      class="relative w-full aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-inner"
-                    >
-                      <div
-                        class="absolute inset-0 bg-brand-verde mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"
-                      ></div>
-                      <img
-                        src="jacqueline.jpeg"
-                        alt="Jacqueline S. de Sousa"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    <div class="px-2 pb-4 flex flex-col flex-grow">
-                      <div class="flex justify-between items-start mb-4">
-                        <div>
-                          <h3
-                            class="text-xl sm:text-2xl font-black text-text-main group-hover:text-brand-verde transition-colors tracking-tight"
-                          >
-                            Jacqueline S. de Sousa
-                          </h3>
-                          <p
-                            class="text-brand-verde font-bold text-xs uppercase tracking-widest mt-1"
-                          >
-                            Neuropsicóloga
-                          </p>
-                          <p
-                            class="text-text-light font-semibold text-[11px] uppercase tracking-widest mt-1"
-                          >
-                            CRP 01/19944
-                          </p>
-                        </div>
-                        <div
-                          class="w-10 h-10 bg-brand-verdeSoft rounded-full flex items-center justify-center text-brand-verde group-hover:bg-brand-verde group-hover:text-white transition-all flex-shrink-0"
-                        >
-                          <i class="fas fa-plus text-xs"></i>
-                        </div>
-                      </div>
-                      <p
-                        class="text-text-light text-sm leading-relaxed mb-6 flex-grow"
-                      >
-                        Pós-graduada em Neuropsicologia e em Análise do
-                        Comportamento Aplicada (ABA), com formação em Análise do
-                        Desenvolvimento Infantil e curso do Inventário Portage e
-                        VB-MAPP.
-                      </p>
-                      <div class="pt-6 border-t border-slate-50">
-                        <a
-                          href="#"
-                          target="_blank"
-                          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-verdeSoft text-brand-verde font-bold text-xs uppercase tracking-widest hover:bg-brand-verde hover:text-white transition-all"
-                        >
-                          <i class="fab fa-instagram"></i> Seguir no Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <div class="flex justify-center items-center gap-8 mt-12 sm:mt-20">
-            <div class="swiper-pagination !static !w-auto"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVIÇOS -->
-      <section
-        id="servicos"
-        class="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden"
-      >
-        <div
-          class="absolute -top-24 -left-24 w-96 h-96 bg-brand-azulSoft/30 rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute top-1/2 right-0 w-64 h-64 bg-brand-amareloSoft/20 rounded-full blur-3xl"
-        ></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-          <div
-            class="max-w-4xl mx-auto text-center mb-12 sm:mb-24"
-            data-aos="fade-up"
-          >
-            <div class="flex items-center justify-center gap-4 mb-6">
-              <span class="w-8 h-[2px] bg-brand-azul/20"></span>
-              <span
-                class="text-text-main font-bold uppercase tracking-[0.3em] text-[10px]"
-                >Especialidades</span
-              >
-              <span class="w-8 h-[2px] bg-brand-azul/20"></span>
-            </div>
-
-            <h2
-              class="text-3xl sm:text-5xl lg:text-7xl font-bold text-brand-azul leading-tight tracking-tighter mb-6 sm:mb-8"
-            >
-              Abordagem
-              <span class="text-brand-azul font-medium italic"
-                >transdisciplinar</span
-              >
-              <br class="hidden sm:block" />
-              e integrada.
-            </h2>
-
-            <p
-              class="text-base sm:text-lg lg:text-xl text-text-light max-w-2xl mx-auto leading-relaxed opacity-90"
-            >
-              Nossas intervenções são pautadas na ciência e no afeto, garantindo
-              que cada criança receba o suporte exato para sua evolução
-              cognitiva, motora e social.
-            </p>
-
-            <div class="mt-8 sm:mt-10 flex justify-center gap-2">
-              <div class="w-1.5 h-1.5 rounded-full bg-brand-azul/20"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-brand-amarelo/20"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-brand-rosa/20"></div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6 sm:gap-8 px-6 sm:px-10 lg:px-12 xl:px-8"
-        >
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-azul/10 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand-azul/10"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div
-              class="absolute inset-0 bg-brand-azul translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-azul text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-comment-dots"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Fonoaudiologia
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Desenvolvimento da linguagem, fala e motricidade orofacial com
-                foco em comunicação funcional.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-azul group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-amarelo/10 shadow-sm hover:shadow-2xl hover:shadow-brand-amarelo/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="150"
-          >
-            <div
-              class="absolute inset-0 bg-brand-amarelo translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-amarelo text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-dumbbell"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Fisioterapia
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Estimulação motora especializada para fortalecer o
-                desenvolvimento físico e funcional da criança.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-amarelo group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-rosa/10 shadow-sm hover:shadow-2xl hover:shadow-brand-rosa/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div
-              class="absolute inset-0 bg-brand-rosa translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-rosa text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-brain"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Psicologia
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Acompanhamento emocional e comportamental com escuta acolhedora
-                para a criança e a família.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-rosa group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-verde/10 shadow-sm hover:shadow-2xl hover:shadow-brand-verde/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="250"
-          >
-            <div
-              class="absolute inset-0 bg-brand-verde translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-verde text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-diagram-project"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Intervenção ABA
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Análise do Comportamento Aplicada para redução de barreiras e
-                aquisição de novas habilidades.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-verde group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-azul/10 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand-azul/10"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div
-              class="absolute inset-0 bg-brand-azul translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-azul text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-hand-holding-heart"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Terapia Ocupacional e Integração Sensorial de Ayres
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Integração sensorial e autonomia nas atividades diárias para uma
-                vida mais independente.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-azul group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-amarelo/10 shadow-sm hover:shadow-2xl hover:shadow-brand-amarelo/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="350"
-          >
-            <div
-              class="absolute inset-0 bg-brand-amarelo translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-amarelo text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-music"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Musicoterapia
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Uso terapêutico da música para estimular comunicação, expressão
-                e regulação emocional.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-amarelo group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-rosa/10 shadow-sm hover:shadow-2xl hover:shadow-brand-rosa/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div
-              class="absolute inset-0 bg-brand-rosa translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-rosa text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-apple-whole"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Terapia Alimentar
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Acompanhamento com nutricionista especializado para uma relação
-                saudável com a alimentação.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-rosa group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-verde/10 shadow-sm hover:shadow-2xl hover:shadow-brand-verde/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="450"
-          >
-            <div
-              class="absolute inset-0 bg-brand-verde translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-verde text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-people-roof"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Orientação Parental
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Suporte e capacitação para os pais atuarem como parceiros ativos
-                no desenvolvimento do filho.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-verde group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-azul/10 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand-azul/10"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div
-              class="absolute inset-0 bg-brand-azul translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-azul text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-magnifying-glass-chart"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Avaliação Neuropsicológica
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Mapeamento cognitivo detalhado para direcionar o plano
-                terapêutico mais adequado à criança.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-azul group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="group relative bg-brand-bege p-6 sm:p-8 rounded-[2rem] sm:rounded-[40px] transition-all duration-500 hover:-translate-y-4 border border-transparent hover:border-brand-amarelo/10 shadow-sm hover:shadow-2xl hover:shadow-brand-amarelo/10 overflow-hidden"
-            data-aos="fade-up"
-            data-aos-delay="550"
-          >
-            <div
-              class="absolute inset-0 bg-brand-amarelo translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"
-            ></div>
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center text-brand-amarelo text-2xl sm:text-3xl mb-6 sm:mb-8 shadow-xl group-hover:scale-110 transition-transform duration-500"
-              >
-                <i class="fas fa-pencil-ruler"></i>
-              </div>
-              <h4
-                class="text-lg sm:text-xl font-bold mb-3 text-text-main group-hover:text-white transition-colors duration-500"
-              >
-                Neuropsicopedagogia
-              </h4>
-              <p
-                class="text-text-light leading-relaxed group-hover:text-white/80 transition-colors duration-500 text-xs sm:text-sm"
-              >
-                Suporte especializado nos processos de aprendizagem e superação
-                de desafios acadêmicos.
-              </p>
-              <div
-                class="mt-6 sm:mt-8 flex items-center gap-2 text-brand-amarelo group-hover:text-white font-bold text-sm"
-              >
-                Saiba mais
-                <i
-                  class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-2"
-                ></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-14 sm:mt-20 text-center px-6" data-aos="zoom-in">
-          <p class="text-text-light font-medium mb-6 italic">
-            Precisa de um atendimento transdisciplinar para seu filho?
-          </p>
-          <a
-            href="#contato"
-            class="inline-flex items-center gap-4 text-brand-azul font-black border-b-2 border-brand-azul/20 hover:border-brand-azul transition-all pb-2 uppercase tracking-widest text-sm"
-          >
-            Agendar uma triagem inicial <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </section>
-
-      <!-- CONTATO -->
-      <section
-        id="contato"
-        class="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden"
-      >
-        <div
-          class="absolute top-0 right-0 w-1/4 h-1/4 bg-brand-azulSoft/20 blur-[120px] rounded-full -z-10"
-        ></div>
-
-        <div class="container mx-auto px-6 lg:px-20">
-          <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              class="space-y-10 sm:space-y-12"
-            >
-              <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                  <span class="w-10 h-[2px] bg-brand-azul/30"></span>
-                  <span
-                    class="text-text-main font-bold uppercase tracking-[0.3em] text-[10px]"
-                    >Onde Estamos</span
-                  >
-                </div>
-                <h2
-                  class="text-4xl sm:text-5xl lg:text-7xl font-bold text-brand-azul leading-none tracking-tighter"
-                >
-                  Venha nos <br />
-                  <span class="text-brand-azul font-medium italic"
-                    >conhecer.</span
-                  >
-                </h2>
-                <p
-                  class="text-text-light text-base sm:text-lg max-w-md opacity-80 leading-relaxed"
-                >
-                  Um espaço planejado nos mínimos detalhes para o conforto e
-                  desenvolvimento do seu filho.
-                </p>
-              </div>
-
-              <div class="grid gap-4 sm:gap-6">
-                <div
-                  class="group flex items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-brand-bege border border-transparent hover:border-brand-azul/10 hover:bg-white hover:shadow-xl hover:shadow-brand-azul/5 transition-all duration-500"
-                >
-                  <div
-                    class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center text-brand-azul text-lg sm:text-xl shadow-sm group-hover:bg-brand-azul group-hover:text-white transition-all duration-500 flex-shrink-0"
-                  >
-                    <i class="fas fa-map-location-dot"></i>
-                  </div>
-                  <div>
-                    <h5
-                      class="text-xs sm:text-sm font-black text-text-main uppercase tracking-widest mb-1"
-                    >
-                      Endereço
-                    </h5>
-                    <p
-                      class="text-text-light text-sm sm:text-base leading-snug font-medium"
-                    >
-                      Edifício Spazio Duo - Taguatinga Sul<br />Sala 301, 3º
-                      andar - Brasília, DF
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="group flex items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-brand-bege border border-transparent hover:border-brand-azul/10 hover:bg-white hover:shadow-xl hover:shadow-brand-azul/5 transition-all duration-500"
-                >
-                  <div
-                    class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center text-brand-azul text-lg sm:text-xl shadow-sm group-hover:bg-brand-azul group-hover:text-white transition-all duration-500 flex-shrink-0"
-                  >
-                    <i class="fas fa-phone-volume"></i>
-                  </div>
-                  <div class="flex-grow min-w-0">
-                    <h5
-                      class="text-xs sm:text-sm font-black text-text-main uppercase tracking-widest mb-1"
-                    >
-                      Agendamento
-                    </h5>
-                    <p
-                      class="text-text-main text-base sm:text-lg font-bold leading-none"
-                    >
-                      (61) 3024-3799
-                    </p>
-                  </div>
-                  <a
-                    href="https://wa.me/556130243799?text=Ol%C3%A1%21%20Estou%20no%20site%20do%20Instituto%20Essencial%20Neurokids%20e%20gostaria%20de%20agendar%20um%20atendimento."
-                    target="_blank"
-                    class="px-4 sm:px-6 py-2 sm:py-3 bg-brand-azul/10 text-brand-azul rounded-xl font-bold text-[10px] sm:text-xs hover:bg-brand-azul hover:text-white transition-all flex-shrink-0"
-                  >
-                    WHATSAPP
-                  </a>
-                </div>
-
-                <div
-                  class="group flex items-start gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-brand-bege border border-transparent hover:border-brand-azul/10 hover:bg-white hover:shadow-xl hover:shadow-brand-azul/5 transition-all duration-500"
-                >
-                  <div
-                    class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center text-brand-azul text-lg sm:text-xl shadow-sm group-hover:bg-brand-azul group-hover:text-white transition-all duration-500 flex-shrink-0"
-                  >
-                    <i class="fas fa-clock"></i>
-                  </div>
-                  <div>
-                    <h5
-                      class="text-xs sm:text-sm font-black text-text-main uppercase tracking-widest mb-1"
-                    >
-                      Horários
-                    </h5>
-                    <p
-                      class="text-text-light text-sm sm:text-base font-medium leading-relaxed"
-                    >
-                      Segunda a Sexta: 08:00 às 19:00<br class="sm:hidden" />
-                      <span class="hidden sm:inline">| </span>Sábados: 08:00 às
-                      12:00
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="relative" data-aos="zoom-in" data-aos-delay="200">
-              <div
-                class="absolute -inset-4 bg-brand-azul/5 blur-2xl rounded-[4rem]"
-              ></div>
-              <div
-                class="absolute -top-6 -right-6 w-32 h-32 bg-brand-amareloSoft rounded-full opacity-50 blur-2xl animate-pulse"
-              ></div>
-
-              <div
-                class="relative h-[420px] sm:h-[520px] lg:h-[650px] w-full bg-white rounded-[2.5rem] sm:rounded-[4rem] shadow-2xl overflow-hidden border-[8px] sm:border-[12px] border-white ring-1 ring-slate-100"
-              >
-                <iframe
-                  src="https://maps.google.com/maps?q=Edif%C3%ADcio%20Spazio%20Duo%2C%20Setor%20D%20Sul%2C%20Lote%2004%2C%20Taguatinga%2C%20Bras%C3%ADlia%20-%20DF&output=embed"
-                  width="100%"
-                  height="100%"
-                  style="border: 0; filter: grayscale(0.2) contrast(1.1)"
-                  allowfullscreen=""
-                  loading="lazy"
-                ></iframe>
-
-                <div
-                  class="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 bg-white/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl border border-white/50 flex items-center justify-between"
-                >
-                  <div>
-                    <p
-                      class="text-[10px] font-black text-brand-azul uppercase tracking-[0.2em] mb-1"
-                    >
-                      Clínica Neurokids
-                    </p>
-                    <p class="text-sm font-bold text-text-main">Brasília, DF</p>
-                  </div>
-                  <a
-                    href="https://maps.app.goo.gl/GD5mJ5aVEWoTRiCY7?g_st=iw"
-                    target="_blank"
-                    class="w-10 h-10 sm:w-12 sm:h-12 bg-brand-azul text-white rounded-xl sm:rounded-2xl flex items-center justify-center hover:scale-110 transition-transform"
-                  >
-                    <i class="fas fa-directions"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
-    <footer
-      class="bg-[#0f172a] text-white pt-16 sm:pt-24 pb-10 sm:pb-12 relative overflow-hidden"
-    >
-      <div
-        class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-azul via-brand-amarelo to-brand-rosa"
-      ></div>
-      <div
-        class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-azul/10 rounded-full blur-[120px]"
-      ></div>
+    <footer class="bg-[#0f172a] text-white pt-16 sm:pt-24 pb-10 sm:pb-12 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-azul via-brand-amarelo to-brand-rosa"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-azul/10 rounded-full blur-[120px]"></div>
 
-      <div class="container mx-auto px-6 lg:px-20 relative z-10">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-24 mb-16 sm:mb-20"
-        >
-          <div class="space-y-6 sm:space-y-8">
-            <div
-              class="transition-transform hover:scale-105 duration-300 inline-block"
-            >
-              <img src="logo2.png" alt="Neurokids" class="h-14 sm:h-16" />
+        <div class="container mx-auto px-6 lg:px-20 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-24 mb-16 sm:mb-20">
+
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="transition-transform hover:scale-105 duration-300 inline-block">
+                        <img src="logo2.png" alt="Neurokids" class="h-14 sm:h-16">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">
+                        Especialistas em transformar o neurodesenvolvimento em uma jornada de descobertas e autonomia.
+                        Ciência pautada no afeto para o futuro do seu filho.
+                    </p>
+                    <a href="https://wa.me/5561999935852?text=Ol%C3%A1%21%20Vi%20o%20site%20do%20Instituto%20Essencial%20Neurokids%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank"
+                        class="inline-flex items-center gap-2 text-xs font-bold text-brand-azulSoft hover:text-white transition-colors uppercase tracking-widest group">
+                        Agende via WhatsApp <i class="fas fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="space-y-6 sm:space-y-8">
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-azul">Mapa do Site</h6>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"><span class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"></span>Início</a></li>
+                        <li><a href="#sobre" class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"><span class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"></span>Sobre Nós</a></li>
+                        <li><a href="#servicos" class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"><span class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"></span>Serviços</a></li>
+                        <li><a href="#contato" class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"><span class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"></span>Localização</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6 sm:space-y-8">
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-amarelo">Especialidades</h6>
+                    <ul class="space-y-4 text-slate-400 font-medium text-xs leading-loose">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Fonoaudiologia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Fisioterapia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Psicologia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Intervenção ABA</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Terapia Ocupacional e Integração Sensorial de Ayres</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Musicoterapia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Terapia Alimentar (Nutricionista)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Orientação Parental</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Avaliação Neuropsicológica</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[10px] text-brand-amarelo/40"></i> Neuropsicopedagogia</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6 sm:space-y-8">
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-rosa">Conecte-se</h6>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://www.instagram.com/essencialneurokids" target="_blank" class="w-11 h-11 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-azul hover:text-white hover:-translate-y-1 transition-all shadow-xl">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/5561999935852?text=Ol%C3%A1%21%20Encontrei%20o%20Instituto%20Essencial%20Neurokids%20nas%20redes%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" class="w-11 h-11 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 hover:bg-green-500 hover:text-white hover:-translate-y-1 transition-all shadow-xl">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-relaxed">
+                        Brasília, DF <br>
+                        Taguatinga Sul
+                    </p>
+                </div>
             </div>
-            <p class="text-slate-400 text-sm leading-relaxed font-medium">
-              Especialistas em transformar o neurodesenvolvimento em uma jornada
-              de descobertas e autonomia. Ciência pautada no afeto para o futuro
-              do seu filho.
-            </p>
-            <a
-              href="https://wa.me/556130243799?text=Ol%C3%A1%21%20Vi%20o%20site%20do%20Instituto%20Essencial%20Neurokids%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
-              target="_blank"
-              class="inline-flex items-center gap-2 text-xs font-bold text-brand-azulSoft hover:text-white transition-colors uppercase tracking-widest group"
-            >
-              Agende via WhatsApp
-              <i
-                class="fas fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"
-              ></i>
-            </a>
-          </div>
 
-          <div class="space-y-6 sm:space-y-8">
-            <h6
-              class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-azul"
-            >
-              Mapa do Site
-            </h6>
-            <ul class="space-y-4">
-              <li>
-                <a
-                  href="#home"
-                  class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"
-                  ><span
-                    class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"
-                  ></span
-                  >Início</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#sobre"
-                  class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"
-                  ><span
-                    class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"
-                  ></span
-                  >Sobre Nós</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#servicos"
-                  class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"
-                  ><span
-                    class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"
-                  ></span
-                  >Serviços</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contato"
-                  class="text-slate-400 hover:text-white text-sm font-semibold transition-all flex items-center gap-2 group"
-                  ><span
-                    class="w-1.5 h-[1px] bg-brand-azul opacity-0 group-hover:opacity-100 transition-all"
-                  ></span
-                  >Localização</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="space-y-6 sm:space-y-8">
-            <h6
-              class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-amarelo"
-            >
-              Especialidades
-            </h6>
-            <ul
-              class="space-y-4 text-slate-400 font-medium text-xs leading-loose"
-            >
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Fonoaudiologia
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Fisioterapia
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Psicologia
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Intervenção ABA
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Terapia Ocupacional e Integração Sensorial de Ayres
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Musicoterapia
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Terapia Alimentar (Nutricionista)
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Orientação Parental
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Avaliação Neuropsicológica
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-[10px] text-brand-amarelo/40"></i>
-                Neuropsicopedagogia
-              </li>
-            </ul>
-          </div>
-
-          <div class="space-y-6 sm:space-y-8">
-            <h6
-              class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-rosa"
-            >
-              Conecte-se
-            </h6>
-            <div class="flex flex-wrap gap-4">
-              <a
-                href="#"
-                class="w-11 h-11 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-azul hover:text-white hover:-translate-y-1 transition-all shadow-xl"
-              >
-                <i class="fab fa-instagram text-lg"></i>
-              </a>
-              <a
-                href="https://wa.me/556130243799?text=Ol%C3%A1%21%20Encontrei%20o%20Instituto%20Essencial%20Neurokids%20nas%20redes%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
-                target="_blank"
-                class="w-11 h-11 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 hover:bg-green-500 hover:text-white hover:-translate-y-1 transition-all shadow-xl"
-              >
-                <i class="fab fa-whatsapp text-lg"></i>
-              </a>
+            <div class="pt-8 sm:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] text-center md:text-left">
+                    © 2026 Instituto Essencial Neurokids. Todos os direitos reservados.
+                </p>
+                <div class="flex items-center gap-4 text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
+                    <span>Privacidade</span>
+                    <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+                    <span>Termos</span>
+                </div>
             </div>
-            <p
-              class="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-relaxed"
-            >
-              Brasília, DF <br />
-              Taguatinga Sul
-            </p>
-          </div>
         </div>
-
-        <div
-          class="pt-8 sm:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6"
-        >
-          <p
-            class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] text-center md:text-left"
-          >
-            © 2026 Instituto Essencial Neurokids. Todos os direitos reservados.
-          </p>
-          <div
-            class="flex items-center gap-4 text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]"
-          >
-            <span>Privacidade</span>
-            <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
-            <span>Termos</span>
-          </div>
-        </div>
-      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script>
-      AOS.init({ once: true });
+        AOS.init({ once: true });
 
-      const openBtn = document.getElementById("open-drawer");
-      const closeBtn = document.getElementById("close-drawer");
-      const drawer = document.getElementById("drawer");
+        const openBtn = document.getElementById('open-drawer');
+        const closeBtn = document.getElementById('close-drawer');
+        const drawer = document.getElementById('drawer');
 
-      openBtn.addEventListener("click", () => {
-        drawer.classList.remove("translate-x-full");
-      });
-      closeBtn.addEventListener("click", () => {
-        drawer.classList.add("translate-x-full");
-      });
+        openBtn.addEventListener('click', () => { drawer.classList.remove('translate-x-full'); });
+        closeBtn.addEventListener('click', () => { drawer.classList.add('translate-x-full'); });
 
-      document.querySelectorAll(".menu-item").forEach((link) => {
-        link.addEventListener("click", () =>
-          drawer.classList.add("translate-x-full"),
-        );
-      });
+        document.querySelectorAll('.menu-item').forEach(link => {
+            link.addEventListener('click', () => drawer.classList.add('translate-x-full'));
+        });
 
-      window.addEventListener("scroll", () => {
-        const inner = document.getElementById("header-inner");
-        if (window.scrollY > 50) {
-          inner.classList.add("py-2", "shadow-2xl");
-          inner.classList.remove("py-3");
-        } else {
-          inner.classList.remove("py-2", "shadow-2xl");
-          inner.classList.add("py-3");
-        }
-      });
+        window.addEventListener('scroll', () => {
+            const inner = document.getElementById('header-inner');
+            if (window.scrollY > 50) {
+                inner.classList.add('py-2', 'shadow-2xl');
+                inner.classList.remove('py-3');
+            } else {
+                inner.classList.remove('py-2', 'shadow-2xl');
+                inner.classList.add('py-3');
+            }
+        });
 
-      const swiper = new Swiper(".teamSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        loop: true,
-        centeredSlides: false,
-        autoplay: {
-          delay: 3200,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-        },
-        speed: 700,
-        navigation: {
-          nextEl: ".team-next",
-          prevEl: ".team-prev",
-        },
-        pagination: { el: ".swiper-pagination", clickable: true },
-        breakpoints: {
-          640: { slidesPerView: 1, spaceBetween: 24 },
-          768: { slidesPerView: 2, spaceBetween: 28 },
-          1200: { slidesPerView: 3, spaceBetween: 30 },
-        },
-      });
+        const swiper = new Swiper('.teamSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 3200,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false
+            },
+            speed: 700,
+            navigation: {
+                nextEl: '.team-next',
+                prevEl: '.team-prev'
+            },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                640: { slidesPerView: 1, spaceBetween: 24 },
+                768: { slidesPerView: 2, spaceBetween: 28 },
+                1200: { slidesPerView: 3, spaceBetween: 30 }
+            }
+        });
     </script>
-  </body>
+
+</body>
+
 </html>
